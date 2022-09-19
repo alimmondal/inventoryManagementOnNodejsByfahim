@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "632497ab96dd3eda2485daa3",
+    "name": "chal",
+    "description": "chaler dam bereche",
+    "price": 55,
+    "unit": "kg",
+    "quantity": 3000,
+    "status": "in-stock",
+    "createdAt": "2022-09-16T15:35:07.069Z",
+    "updatedAt": "2022-09-17T13:16:36.393Z",
+    "__v": 0
+  },
+  {
+    "_id": "6324997ad03e428a5be7b78d",
+    "name": "dal",
+    "description": "daler dam kom noy",
+    "price": 73,
+    "unit": "kg",
+    "quantity": 1000,
+    "status": "in-stock",
+    "createdAt": "2022-09-16T15:42:50.990Z",
+    "updatedAt": "2022-09-16T15:42:50.990Z",
+    "__v": 0
+  },
+  {
+    "_id": "63249b8bca65d0dff9c28527",
+    "name": "apple",
+    "description": "apple er dam kom noy",
+    "price": 73,
+    "unit": "kg",
+    "quantity": 0,
+    "status": "in-stock",
+    "createdAt": "2022-09-16T15:51:39.810Z",
+    "updatedAt": "2022-09-16T15:51:39.810Z",
+    "__v": 0
+  },
+  {
+    "_id": "63249bdab76c15c0c4b2ec57",
+    "name": "Orange",
+    "description": "Orange er dam kom beshi",
+    "price": 100,
+    "unit": "kg",
+    "quantity": 0,
+    "status": "out-of-stock",
+    "createdAt": "2022-09-16T15:52:58.776Z",
+    "updatedAt": "2022-09-16T15:52:58.776Z",
+    "__v": 0
+  },
+  {
+    "_id": "632540650a23964f09202d1b",
+    "name": "Battery",
+    "description": "Battery er dam kom beshi",
+    "price": 15,
+    "unit": "pcs",
+    "quantity": 10,
+    "status": "in-stock",
+    "createdAt": "2022-09-17T03:35:01.680Z",
+    "updatedAt": "2022-09-17T03:35:01.680Z",
+    "__v": 0
+  },
+  {
+    "_id": "6325427970117641c33fd242",
+    "name": "T-Shirt",
+    "description": "T-Shirt er dam kom beshi",
+    "price": 150,
+    "unit": "pcs",
+    "quantity": 0,
+    "status": "out-of-stock",
+    "createdAt": "2022-09-17T03:43:53.511Z",
+    "updatedAt": "2022-09-17T03:43:53.511Z",
+    "__v": 0
+  },
+  {
+    "_id": "6325645889b1e8c7d666d602",
+    "name": "Mobile",
+    "description": "Mobile is easy to use",
+    "price": 15000,
+    "unit": "pcs",
+    "quantity": 1,
+    "status": "in-stock",
+    "createdAt": "2022-09-17T06:08:24.583Z",
+    "updatedAt": "2022-09-17T06:08:24.583Z",
+    "__v": 0
+  },
+  {
+    "_id": "6325872985f176a2ce94d02e",
+    "name": "Laptop",
+    "description": "Laptop it's working",
+    "price": 73000,
+    "unit": "pcs",
+    "quantity": 1,
+    "status": "in-stock",
+    "createdAt": "2022-09-17T08:36:57.307Z",
+    "updatedAt": "2022-09-17T08:36:57.307Z",
+    "__v": 0
+  },
+  {
+    "_id": "63258e9273f459d88279c972",
+    "name": "Desktop",
+    "description": "Desktop it's working",
+    "price": 93000,
+    "unit": "pcs",
+    "quantity": 1,
+    "status": "in-stock",
+    "createdAt": "2022-09-17T09:08:34.228Z",
+    "updatedAt": "2022-09-17T09:58:53.356Z",
+    "__v": 0
+  },
+  {
+    "_id": "632595b5d499ea5b0aac9779",
+    "name": "Desktop2",
+    "description": "Desktop2 it's working",
+    "price": 83000,
+    "unit": "pcs",
+    "quantity": 1,
+    "status": "in-stock",
+    "createdAt": "2022-09-17T09:39:01.379Z",
+    "updatedAt": "2022-09-17T09:39:01.379Z",
+    "__v": 0
+  }
+]
