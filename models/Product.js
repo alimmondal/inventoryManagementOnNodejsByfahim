@@ -15,11 +15,6 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
-      type: Number,
-      required: true,
-      min: [0, "price can't be negative"],
-    },
     unit: {
       type: String,
       required: true,
@@ -28,51 +23,50 @@ const productSchema = mongoose.Schema(
         message: "unit value must be {VALUE}",
       },
     },
-    quantity: {
-      type: Number,
-      required: true,
-      min: [0, "quantity can't be negative"],
-      validate: {
-        validator: (value) => {
-          const isInteger = Number.isInteger(value);
-          if (isInteger) {
-            return true;
-          } else {
-            return false;
-          }
-        },
-      },
-      message: "Quantity must be an integer.",
-    },
     status: {
       type: String,
       required: true,
       enum: {
-        values: ["in-stock", "out-of-stock", "discontinued"],
-        message: "status can't be {VALUE}",
+        values: ["kg", "litre", "pcs", "bag"],
+        message: "status must be {VALUE}",
       },
     },
-    // supplier: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "Supplier",
-    // },
-    // categories: [
-    //   {
-    //     name: {
-    //       type: String,
-    //       required: true,
-    //     },
-    //     _id: mongoose.Schema.Types.ObjectId,
-    //   },
-    // ],
-    // createdAt: {
-    //   type: Date,
-    //   default: Date.now,
-    // },
-    // updatedAt: {
-    //   type: Date,
-    //   default: Date.now,
-    // },
+    imageUrl: [
+      {
+        type: String,
+        required: true,
+        validate: {
+          validator: (value) => {
+            if (!Array.isArray(value)) {
+              return false;
+            }
+            let isValid = true;
+            value.forEach((url) => {
+              if (!validator.isUrl(url)) {
+                isValid = false;
+              }
+            });
+            return isValid;
+          },
+          message: "Please provide valid image urls",
+        },
+      },
+    ],
+    categories: {
+      type: String,
+      required: true,
+    },
+    brand: {
+      name: {
+        type: String,
+        required: true,
+      },
+      id: {
+        type: ObjectId,
+        ref: "Brand",
+        required: true,
+      },
+    },
   },
   {
     timestamps: true,
@@ -87,10 +81,6 @@ productSchema.pre("save", function (next) {
   }
   next();
 });
-// productSchema.post("save", function (doc, next) {
-//   console.log("after saving data");
-//   next();
-// });
 
 productSchema.methods.logger = function () {
   console.log(`Data saved for ${this.name}`);
