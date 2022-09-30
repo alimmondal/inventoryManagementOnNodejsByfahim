@@ -92,41 +92,6 @@ exports.updateProduct = async (req, res, next) => {
   }
 };
 
-exports.bulkUpdateProduct = async (req, res, next) => {
-  try {
-    const result = await bulkUpdateProductService(req.body);
-
-    res.status(200).json({
-      status: "Success",
-      message: "Products updated successfully",
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: "fail",
-      message: "couldn't update the product",
-      error: error.message,
-    });
-  }
-};
-
-exports.bulkDeleteProduct = async (req, res, next) => {
-  try {
-    console.log(req.body);
-    const result = await bulkDeleteProductByIdService(req.body.ids);
-
-    res.status(200).json({
-      status: "Success",
-      message: "Products deleted successfully",
-    });
-  } catch (error) {
-    res.status(400).json({
-      status: "fail",
-      message: "couldn't delete the product",
-      error: error.message,
-    });
-  }
-};
-
 exports.deleteProductById = async (req, res, next) => {
   try {
     const { id } = req.params;

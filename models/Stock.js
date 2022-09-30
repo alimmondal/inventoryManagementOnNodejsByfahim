@@ -1,10 +1,15 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema.Types;
 const validator = require("validator");
+const { ObjectId } = mongoose.Schema.Types;
 
 // schema design
-const productSchema = mongoose.Schema(
+const stockSchema = mongoose.Schema(
   {
+    productId: {
+      type: ObjectId,
+      required: true,
+      ref: "Product",
+    },
     name: {
       type: String,
       required: [true, "please provide a name for this product"],
@@ -54,6 +59,16 @@ const productSchema = mongoose.Schema(
         },
       },
     ],
+    price: {
+      type: Number,
+      required: true,
+      min: [0, "Product price can't be negative"],
+    },
+    quantity: {
+      type: Number,
+      required: true,
+      min: [0, "Product price can't be negative"],
+    },
     categories: {
       type: String,
       required: true,
@@ -69,6 +84,52 @@ const productSchema = mongoose.Schema(
         required: true,
       },
     },
+    status: {
+      type: String,
+      required: true,
+      enum: {
+        values: ["in-stock", "out-of-stock", "discontinued"],
+        message: "status must be {VALUE}",
+      },
+    },
+    store: {
+      name: {
+        type: String,
+        trim: true,
+        required: [true, "please provide a brand name"],
+        lowercase: true,
+        enum: {
+          values: [
+            "dhaka",
+            "chattogram",
+            "rajshahi",
+            "sylhet",
+            "khulna",
+            "rangpur",
+            "barishal",
+            "mymenshing",
+          ],
+          message: "{VALUE} is not a valid name.",
+        },
+      },
+      id: {
+        type: ObjectId,
+        required: true,
+        ref: "Store",
+      },
+    },
+    suppliedBy: {
+      name: {
+        type: String,
+        trim: true,
+        required: [true, "please provide a supplier name"],
+      },
+      id: {
+        type: ObjectId,
+        ref: "Supplier",
+      },
+    },
+    //timestams
   },
   {
     timestamps: true,
@@ -84,7 +145,11 @@ productSchema.pre("save", function (next) {
   next();
 });
 
-//SCHEMA > MODEL > QUERY
-const Product = mongoose.model("Product", productSchema);
+productSchema.methods.logger = function () {
+  console.log(`Data saved for ${this.name}`);
+};
 
-module.exports = Product;
+//SCHEMA > MODEL > QUERY
+const Stock = mongoose.model("Stock", stockSchema);
+
+module.exports = Stock;

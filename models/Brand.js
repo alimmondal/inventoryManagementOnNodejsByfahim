@@ -16,11 +16,6 @@ const brandSchema = mongoose.Schema(
     description: {
       type: String,
     },
-    price: {
-      type: Number,
-      required: true,
-      min: [0, "price can't be negative"],
-    },
     email: {
       type: String,
       validate: [validator.isEmail, "please provide a valid email"],
@@ -28,7 +23,7 @@ const brandSchema = mongoose.Schema(
     },
     website: {
       type: String,
-      validate: [validator.isUrl, "please provide a valid url"],
+      validate: [validator.isURL, "please provide a valid url"],
     },
     location: String,
     products: [
@@ -49,12 +44,10 @@ const brandSchema = mongoose.Schema(
     ],
     status: {
       type: String,
-      required: true,
-      enum: {
-        values: ["active", "inactive"],
-        default: "active",
-      },
+      values: ["active", "inactive"],
+      default: "active",
     },
+    //timestamps
   },
   {
     timestamps: true,
