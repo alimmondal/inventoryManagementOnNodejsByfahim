@@ -14,7 +14,7 @@ const stockSchema = mongoose.Schema(
       type: String,
       required: [true, "please provide a name for this product"],
       trim: true,
-      unique: [true, "name must be unique"],
+      // unique: [true, "name must be unique"],
       minLength: [3, "name must be at least 3 characters"],
       maxLength: [100, "name is too large"],
     },
@@ -26,37 +26,15 @@ const stockSchema = mongoose.Schema(
       type: String,
       required: true,
       enum: {
-        values: ["kg", "litre", "pcs"],
-        message: "unit value must be {VALUE}",
-      },
-    },
-    status: {
-      type: String,
-      required: true,
-      enum: {
         values: ["kg", "litre", "pcs", "bag"],
-        message: "status must be {VALUE}",
+        message: "unit value can't be {VALUE}, must be kg/litre/pcs/bag",
       },
     },
-    imageUrl: [
+    imageURLs: [
       {
         type: String,
         required: true,
-        validate: {
-          validator: (value) => {
-            if (!Array.isArray(value)) {
-              return false;
-            }
-            let isValid = true;
-            value.forEach((url) => {
-              if (!validator.isUrl(url)) {
-                isValid = false;
-              }
-            });
-            return isValid;
-          },
-          message: "Please provide valid image urls",
-        },
+        validate: [validator.isURL, "Please provide valid url(s)"],
       },
     ],
     price: {
@@ -101,7 +79,7 @@ const stockSchema = mongoose.Schema(
         enum: {
           values: [
             "dhaka",
-            "chattogram",
+            "chottogram",
             "rajshahi",
             "sylhet",
             "khulna",
@@ -129,6 +107,11 @@ const stockSchema = mongoose.Schema(
         ref: "Supplier",
       },
     },
+    sellCount: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
     //timestams
   },
   {
@@ -145,9 +128,9 @@ productSchema.pre("save", function (next) {
   next();
 });
 
-productSchema.methods.logger = function () {
-  console.log(`Data saved for ${this.name}`);
-};
+// productSchema.methods.logger = function () {
+//   console.log(`Data saved for ${this.name}`);
+// };
 
 //SCHEMA > MODEL > QUERY
 const Stock = mongoose.model("Stock", stockSchema);
