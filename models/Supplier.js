@@ -24,13 +24,13 @@ const supplierSchema = mongoose.Schema(
     brand: {
       name: {
         type: String,
-        required: true,
         trim: true,
+        required: true,
       },
       id: {
         type: ObjectId,
-        ref: "Brand",
         required: true,
+        ref: "Brand",
       },
     },
     contactNumber: [
@@ -38,7 +38,7 @@ const supplierSchema = mongoose.Schema(
         type: String,
         required: [true, "Please provide a contact number"],
         validate: {
-          validator: () => {
+          validator: (value) => {
             return validator.isMobilePhone(value);
           },
           message: "Please provide a valid phone number",
@@ -49,7 +49,7 @@ const supplierSchema = mongoose.Schema(
       type: String,
       required: [true, "Please provide a emergency contact number"],
       validate: {
-        validator: () => {
+        validator: (value) => {
           return validator.isMobilePhone(value);
         },
         message: "Please provide a valid phone number",
@@ -68,31 +68,29 @@ const supplierSchema = mongoose.Schema(
       required: [true, "Please provide permanent address"],
     },
     location: {
-      name: {
-        type: String,
-        required: true,
-        lowercase: true,
-        enum: {
-          values: [
-            "dhaka",
-            "chattogram",
-            "rajshahi",
-            "sylhet",
-            "khulna",
-            "rangpur",
-            "barishal",
-            "mymenshing",
-          ],
-          message: "{VALUE} is not a valid name.",
-        },
-      },
-      id: {
-        type: ObjectId,
-        required: true,
-        ref: "Store",
+      type: String,
+      required: true,
+      lowercase: true,
+      enum: {
+        values: [
+          "dhaka",
+          "chottogram",
+          "rajshahi",
+          "sylhet",
+          "khulna",
+          "rangpur",
+          "barishal",
+          "mymenshing",
+        ],
+        message: "{VALUE} is not a valid name.",
       },
     },
+
     imageURL: {
+      type: String,
+      validate: [validator.isURL, "Please provide a valid url"],
+    },
+    nationalIdImageURL: {
       type: String,
       validate: [validator.isURL, "Please provide a valid url"],
     },

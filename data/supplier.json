@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Mezbaul Abedin Persian",
+    "email": "meba.pran@test.com",
+    "brand": {
+      "name": "Rupchanda",
+      "id": "633eb987781220e4d2abd91e"
+    },
+    "contactNumber": ["0111111111", "0222222222"],
+    "emergencyContactNumber": "011111111111",
+    "tradeLicenceNumber": "011111111111",
+    "presentAddress": "944 Honduras street",
+    "permanentAddress": "666 Ghana Street",
+    "location": "chottogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  },
+  {
+    "name": "Alim",
+    "email": "italimbd@gail.com",
+    "brand": {
+      "name": "ACI",
+      "id": "633eb987781220e4d2abd91c"
+    },
+    "contactNumber": ["0111111111", "0222222222"],
+    "emergencyContactNumber": "011111111111",
+    "tradeLicenceNumber": "011111111111",
+    "presentAddress": "944 Honduras street",
+    "permanentAddress": "666 Ghana Street",
+    "location": "chottogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  },
+  {
+    "name": "Fahim",
+    "email": "ialim.dev@gmail.com",
+    "brand": {
+      "name": "Fresh",
+      "id": "633eb987781220e4d2abd91d"
+    },
+    "contactNumber": ["0111111111", "0222222222"],
+    "emergencyContactNumber": "011111111111",
+    "tradeLicenceNumber": "011111111111",
+    "presentAddress": "944 Honduras street",
+    "permanentAddress": "666 Ghana Street",
+    "location": "chottogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
+  }
+]
