@@ -1,13 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
 const productController = require("../controllers/product.controller");
+const uploader = require("../middleware/uploader");
 
-const uploader = multer({ dest: "images/" });
+// to upload single image
+// router.post(
+//   "/file-upload",
+//   uploader.single("image"),
+//   productController.fileUpload
+// );
 
+// to upload multiple images
 router.post(
   "/file-upload",
-  uploader.single("image"),
+  uploader.array("image"),
   productController.fileUpload
 );
 

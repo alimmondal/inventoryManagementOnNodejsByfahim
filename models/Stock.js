@@ -89,7 +89,7 @@ const stockSchema = mongoose.Schema(
       required: true,
       enum: {
         values: ["in-stock", "out-of-stock", "discontinued"],
-        message: "status must be {VALUE}",
+        message: "status can't be {VALUE}",
       },
     },
     store: {
