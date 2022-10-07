@@ -10,7 +10,7 @@ exports.createStoreService = async (data) => {
   return stores;
 };
 
-exports.getBrandServiceById = async (storeId) => {
+exports.getStorServiceById = async (storeId) => {
   const store = await Store.findOne({ _id: storeId });
   return store;
 };

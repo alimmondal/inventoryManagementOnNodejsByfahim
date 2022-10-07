@@ -1,8 +1,7 @@
 const {
-  getBrandServiceById,
-  updateBandServiceById,
   getStoresService,
   createStoreService,
+  getStorServiceById,
 } = require("../services/store.service");
 
 exports.getStores = async (req, res, next) => {
@@ -43,7 +42,7 @@ exports.createStore = async (req, res, next) => {
 exports.getStoreById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const store = await getBrandServiceById(id);
+    const store = await getStorServiceById(id);
 
     res.status(200).json({
       status: "Success",

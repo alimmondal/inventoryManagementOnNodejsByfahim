@@ -1,0 +1,178 @@
+[
+  {
+    "productId": "633fb4c2249715aac8031036",
+    "name": "Pran Chinigura Aromatic Rice - 5kg",
+    "description": "",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/pran-chinigura-aromatic-rice-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108114&q=best&v=1&m=400&webp=1",
+      "https://chaldn.com/_mpimage/pran-nazirshail-rice-5-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48089&q=low&v=1&m=400&webp=1"
+    ],
+    "unit": "bag",
+    "price": "255",
+    "quantity": "2550",
+    "status": "in-stock",
+    "categories": "rice",
+    "brand": {
+      "name": "ACI",
+      "id": "633eb987781220e4d2abd91c"
+    },
+    "store": {
+      "name": "chottogram",
+      "id": "633fc991d892d6a0a332dc58"
+    },
+    "suppliedBy": {
+      "name": "mezbaul abedin persian",
+      "id": "633ecd6b62dce907af306676"
+    }
+  },
+  {
+    "productId": "633fd1017d022ddf76807f74",
+    "name": "pran nazirshail rice - 5kg",
+    "description": "This is a description of pran nazirshail rice",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
+    ],
+    "unit": "bag",
+    "price": "255",
+    "quantity": "2550",
+    "status": "in-stock",
+    "categories": "rice",
+    "brand": {
+      "name": "ACI",
+      "id": "633fd90d59691253e9bf7565"
+    },
+    "store": {
+      "name": "dhaka",
+      "id": "633fc8bad892d6a0a332dc55"
+    },
+    "suppliedBy": {
+      "name": "Alim",
+      "id": "633ecfff46075d87c4270ff8"
+    }
+  },
+  {
+    "productId": "633fd2247d022ddf76807f76",
+    "name": "fresh chinigura rice",
+    "description": "This is a description of pran nazirshail rice",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/fresh-chinigura-rice-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D84466&q=low&v=1&m=400&webp=1"
+    ],
+    "unit": "bag",
+    "price": "333",
+    "quantity": "33333",
+    "status": "in-stock",
+    "categories": "rice",
+    "brand": {
+      "name": "Fresh",
+      "id": "633eb987781220e4d2abd91d"
+    },
+    "store": {
+      "name": "barishal",
+      "id": "633fcda0d892d6a0a332dc5a"
+    },
+    "suppliedBy": {
+      "name": "fahim",
+      "id": "633ed03d46075d87c4270ffa"
+    }
+  },
+  {
+    "productId": "633fdc2fccdf49c137567f57",
+    "name": "Fresh Fortified Soyabean Oil - 5ltr",
+    "description": "This is a description of pran nazirshail rice",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/fresh-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D93160&q=best&v=1&m=400&webp=1"
+    ],
+    "unit": "litre",
+    "price": "333",
+    "quantity": "33333",
+    "status": "in-stock",
+    "categories": "Oil",
+    "brand": {
+      "name": "Fresh",
+      "id": "633eb987781220e4d2abd91d"
+    },
+    "store": {
+      "name": "dhaka",
+      "id": "633fc8bad892d6a0a332dc55"
+    },
+    "suppliedBy": {
+      "name": "mezbaul abedin persian",
+      "id": "633ecd6b62dce907af306676"
+    }
+  },
+  {
+    "productId": "633fdc2fccdf49c137567f57",
+    "name": "Rupchanda Fortified Soyabean Oil - 5ltr",
+    "description": "This is a description of pran nazirshail rice",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D92500&q=best&v=1&m=400&webp=1"
+    ],
+    "unit": "litre",
+    "price": "333",
+    "quantity": "33333",
+    "status": "in-stock",
+    "categories": "Oil",
+    "brand": {
+      "name": "Rupchanda",
+      "id": "633eb987781220e4d2abd91e"
+    },
+    "store": {
+      "name": "chottogram",
+      "id": "633fc991d892d6a0a332dc58"
+    },
+    "suppliedBy": {
+      "name": "Alim",
+      "id": "633ecfff46075d87c4270ff8"
+    }
+  },
+  {
+    "productId": "633fdb9d70a37387d5f14245",
+    "name": "Fresh Refined Sugar",
+    "description": "This is a description of fresh sugar",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/fresh-refined-sugar-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D113128&q=best&v=1&m=400&webp=1"
+    ],
+    "unit": "kg",
+    "price": "92",
+    "quantity": "3333",
+    "status": "in-stock",
+    "categories": "sugar",
+    "brand": {
+      "name": "Fresh",
+      "id": "633eb987781220e4d2abd91d"
+    },
+    "store": {
+      "name": "barishal",
+      "id": "633fcda0d892d6a0a332dc5a"
+    },
+    "suppliedBy": {
+      "name": "fahim",
+      "id": "633ed03d46075d87c4270ffa"
+    }
+  },
+  {
+    "productId": "633fdc73bc9ca7652d48f082",
+    "name": "ACI Pure Miniket Rice Premium",
+    "description": "This is a description of ACI Pure Miniket Rice Premium",
+    "imageURLs": [
+      "https://chaldn.com/_mpimage/aci-pure-miniket-rice-premium-10-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D48063&q=best&v=1&m=400&webp=1"
+    ],
+    "unit": "kg",
+    "price": "92",
+    "quantity": "3333",
+    "status": "in-stock",
+    "categories": "rice",
+    "brand": {
+      "name": "ACI",
+      "id": "633eb987781220e4d2abd91c"
+    },
+    "store": {
+      "name": "dhaka",
+      "id": "633fc8bad892d6a0a332dc55"
+    },
+    "suppliedBy": {
+      "name": "mezbaul abedin persian",
+      "id": "633ecd6b62dce907af306676"
+    }
+  }
+]

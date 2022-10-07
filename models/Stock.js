@@ -120,7 +120,7 @@ const stockSchema = mongoose.Schema(
 );
 
 // mongoose middlewares for saving data: pre/ post
-productSchema.pre("save", function (next) {
+stockSchema.pre("save", function (next) {
   console.log("Before saving data");
   if (this.quantity == 0) {
     this.status = "out-of-stock";

@@ -1,42 +1,66 @@
-const Brand = require("../models/Brand");
+const Stock = require("../models/Stock");
 
-exports.getStocksService = async () => {
-  const brands = await Brand.find({}).select("-products -suppliers");
-  // .sort(queries.sortBy);
-  return brands;
+exports.getStocksService = async (filters, queries) => {
+  const stocks = await Stock.find(filters)
+    .skip(queries.skip)
+    .limit(queries.limit)
+    .select(queries.fields)
+    .sort(queries.sortBy);
+
+  const total = await Stock.countDocuments(filters);
+  const page = Math.ceil(totalStocks / queries.limit);
+  return { total, page, stocks };
 };
 
 exports.createStockService = async (data) => {
-  //post can be in two ways: save or create
-  //or create
-  const result = await Brand.create(data);
-  // save
-  // const result = new Product(data);
+  const stock = await Stock.create(data);
+  return stock;
+};
 
-  //instance creation > Do something > save()
+exports.getStockByIdService = async (id) => {
+  const stock = await Stock.findOne({ _id: id }).populate("store.id");
+  return stock;
+};
 
-  // if (result.quantity == 0) {
-  //   result.status = "out-of-stock";
-  // }
-  // const result = await product.save();
+exports.updateStockByIdService = async (stockId, data) => {
+  const result = await Stock.updateOne(
+    { _id: stockId },
+    { $inc: data },
+    {
+      runValidators: true,
+    }
+  );
+
+  // const stock = await Product.findById(stockId);
+  // const result = await product.set(data).save();
   return result;
 };
 
-exports.getStockServiceById = async (id) => {
-  const brands = await Brand.findOne({ _id: id }).populate("products");
-  return brands;
-};
-
-exports.updateStockServiceById = async (id, data) => {
-  //two ways to update: old & new;
-  //new way;
-  const result = await Brand.updateOne({ _id: id }, data, {
-    runValidators: true,
-  });
-
-  //   old way;
-  //   const brand = await Brand.findById(id);
-  //   const brand = await Brand.set(data).save();
-
+exports.deleteStockByIdService = async (id) => {
+  const result = await Stock.deleteOne({ _id: id });
   return result;
 };
+
+// exports.bulkUpdateProductService = async (data) => {
+// console.log(data.ids,data.data)
+// const result = await Product.updateMany({ _id: data.ids }, data.data, {
+//     runValidators: true
+// });
+
+//   const products = [];
+
+//   data.ids.forEach((product) => {
+//     products.push(Product.updateOne({ _id: product.id }, product.data));
+//   });
+
+//   const result = await Promise.all(products);
+//   console.log(result);
+
+//   return result;
+// };
+
+// exports.bulkDeleteProductService = async (ids) => {
+//   const result = await Product.deleteMany({ _id: ids });
+
+//   return result;
+// };

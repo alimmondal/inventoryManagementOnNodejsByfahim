@@ -13,7 +13,7 @@ const storeSchema = mongoose.Schema(
       enum: {
         values: [
           "dhaka",
-          "chattogram",
+          "chottogram",
           "rajshahi",
           "sylhet",
           "khulna",
@@ -24,16 +24,14 @@ const storeSchema = mongoose.Schema(
         message: "{VALUE} is not a valid name.",
       },
     },
-    description: {
-      type: String,
-    },
+    description: String,
     status: {
       type: String,
       enum: ["active", "inactive"],
       default: "active",
     },
     manager: {
-      type: String,
+      name: String,
       contactNumber: String,
       id: {
         type: ObjectId,
