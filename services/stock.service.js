@@ -7,9 +7,9 @@ exports.getStocksService = async (filters, queries) => {
     .select(queries.fields)
     .sort(queries.sortBy);
 
-  const total = await Stock.countDocuments(filters);
+  const totalStocks = await Stock.countDocuments(filters);
   const page = Math.ceil(totalStocks / queries.limit);
-  return { total, page, stocks };
+  return { totalStocks, page, stocks };
 };
 
 exports.createStockService = async (data) => {
@@ -18,7 +18,10 @@ exports.createStockService = async (data) => {
 };
 
 exports.getStockByIdService = async (id) => {
-  const stock = await Stock.findOne({ _id: id }).populate("store.id");
+  const stock = await Stock.findOne({ _id: id })
+    .populate("store.id")
+    .populate("suppliedBy.id")
+    .populate("brand.id");
   return stock;
 };
 

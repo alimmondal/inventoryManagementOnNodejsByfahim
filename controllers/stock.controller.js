@@ -3,6 +3,7 @@ const {
   createStockService,
   updateStockByIdService,
   deleteStockByIdService,
+  getStockByIdService,
 } = require("../services/stock.service");
 
 exports.getStocks = async (req, res, next) => {
