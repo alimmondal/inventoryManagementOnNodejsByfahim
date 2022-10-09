@@ -90,8 +90,14 @@ userSchema.pre("save", function (next) {
   const hashedPassword = bcrypt.hashSync(password);
   this.password = hashedPassword;
   this.confirmPassword = undefined;
+
   next();
 });
+
+userSchema.methods.comparePassword = function (password, hash) {
+  const isPasswordValid = bcrypt.compareSync(password, hash);
+  return isPasswordValid;
+};
 
 //SCHEMA > MODEL > QUERY
 const User = mongoose.model("User", userSchema);
