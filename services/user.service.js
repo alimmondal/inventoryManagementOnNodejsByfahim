@@ -8,3 +8,6 @@ exports.signupService = async (userInfo) => {
 exports.findUserByEmail = async (email) => {
   return await User.findOne({ email });
 };
+exports.findUserByToken = async (email) => {
+  return await User.findOne({ confirmationToken: token });
+};
