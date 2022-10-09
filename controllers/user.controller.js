@@ -1,9 +1,19 @@
 const { signupService, findUserByEmail } = require("../services/user.service");
+const { sendMailWithGmail } = require("../utils/email");
 const { generateToken } = require("../utils/token");
 
 exports.signup = async (req, res) => {
   try {
     const user = await signupService(req.body);
+
+    const mailData = {
+      to: [user.email],
+      subject: "Verify your account",
+      text: "Thank you",
+    };
+
+    sendMailWithGmail(mailData);
+    // sendMailWithMailGun(mailData);
 
     res.status(200).json({
       status: "Success",
