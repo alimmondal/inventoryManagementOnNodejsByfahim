@@ -28,8 +28,8 @@ router.route("/bulk-update").patch(productController.bulkUpdateProduct);
 router.route("/bulk-delete").delete(productController.bulkDeleteProduct);
 
 router.route("/").get(productController.getProducts).post(
-  verifyToken, //to verify access to single router
-  authorization("admin", "store-manager"),
+  // verifyToken, //to verify access to single router
+  // authorization("admin", "store-manager"),
   productController.createProduct
 );
 

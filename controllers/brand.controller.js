@@ -23,9 +23,7 @@ exports.getBrands = async (req, res, next) => {
 };
 
 exports.createBrand = async (req, res, next) => {
-  //post can be in two ways: save or create
   try {
-    //or create
     const result = await createBrandService(req.body);
 
     res.status(200).json({
@@ -72,12 +70,12 @@ exports.updateBrand = async (req, res, next) => {
 
     const result = await updateBandServiceById(id, req.body);
 
-    console.log(result);
+    // console.log(result);
 
-    if (!result.nModified) {
+    if (!result.modifiedCount) {
       return res.status(400).json({
-        status: "Success",
-        error: "Couldn't updated the brand with id",
+        status: "Fail",
+        error: "Couldn't update the brand with id",
       });
     }
 

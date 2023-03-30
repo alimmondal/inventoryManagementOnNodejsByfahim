@@ -11,10 +11,5 @@ router
   .route("/:id")
   .get(brandController.getBrandById)
   .patch(brandController.updateBrand);
-//   .delete(productsControllers.deleteProductById);
-// router
-//   .route("/:id")
-//   .patch(productsControllers.updateProduct)
-//   .delete(productsControllers.deleteProductById);
 
 module.exports = router;

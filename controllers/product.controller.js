@@ -1,7 +1,7 @@
 const {
   getProductsService,
   createProductService,
-  updateProductByIdService,
+  updateProductService,
   bulkUpdateProductService,
   deleteProductByIdService,
   bulkDeleteProductService,
@@ -31,10 +31,10 @@ exports.getProducts = async (req, res, next) => {
     const queries = {};
 
     if (req.query.sort) {
-      // price,qunatity   -> 'price quantity'
+      // price,quantity   -> 'price quantity'
       const sortBy = req.query.sort.split(",").join(" ");
       queries.sortBy = sortBy;
-      console.log(sortBy);
+      // console.log(sortBy);
     }
 
     if (req.query.fields) {
@@ -83,7 +83,7 @@ exports.createProduct = async (req, res, next) => {
 
     res.status(200).json({
       status: "success",
-      messgae: "Data inserted successfully!",
+      message: "Data inserted successfully!",
       data: result,
     });
   } catch (error) {
@@ -98,10 +98,10 @@ exports.createProduct = async (req, res, next) => {
 exports.updateProductById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const result = await updateProductByIdService(id, req.body);
+    const result = await updateProductService(id, req.body);
 
     res.status(200).json({
-      stauts: "success",
+      status: "success",
       message: "Successfully updated the product",
     });
   } catch (error) {
@@ -160,10 +160,10 @@ exports.deleteProductById = async (req, res, next) => {
 exports.bulkDeleteProduct = async (req, res, next) => {
   try {
     console.log(req.body);
-    const result = await bulkDeleteProductService(req.body.ids);
+    const result = await bulkDeleteProductService();
 
     res.status(200).json({
-      stauts: "success",
+      status: "success",
       message: "Successfully deleted the given products",
     });
   } catch (error) {

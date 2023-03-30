@@ -112,14 +112,13 @@ const stockSchema = mongoose.Schema(
       default: 0,
       min: 0,
     },
-    //timestams
   },
   {
     timestamps: true,
   }
 );
 
-// mongoose middlewares for saving data: pre/ post
+// mongoose middleware for saving data: pre/ post
 stockSchema.pre("save", function (next) {
   console.log("Before saving data");
   if (this.quantity == 0) {

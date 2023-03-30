@@ -12,7 +12,7 @@ const productSchema = mongoose.Schema(
       unique: [true, "Name must be unique"],
       lowercase: true,
       minLength: [3, "Name must be at least 3 characters."],
-      maxLenght: [100, "Name is too large"],
+      maxLength: [100, "Name is too large"],
     },
     description: {
       type: String,
@@ -40,16 +40,20 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-
+    // price: {
+    //   type: Number,
+    //   required: true,
+    //   min: [0, "Price cannot be negative"],
+    // },
     brand: {
       name: {
         type: String,
-        required: true,
+        // required: true,
       },
       id: {
         type: ObjectId,
         ref: "Brand",
-        required: true,
+        // required: true,
       },
     },
   },
@@ -58,99 +62,16 @@ const productSchema = mongoose.Schema(
   }
 );
 
-productSchema.pre("save", function (next) {
-  //this ->
-  console.log(" Before saving data");
-  if (this.quantity == 0) {
-    this.status = "out-of-stock";
-  }
+// productSchema.pre("save", function (next) {
+//   //this ->
+//   console.log(" Before saving data");
+//   if (this.quantity == 0) {
+//     this.status = "out-of-stock";
+//   }
 
-  next();
-});
+//   next();
+// });
 
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;
-
-// const mongoose = require("mongoose");
-// const { ObjectId } = mongoose.Schema.Types;
-// const validator = require("validator");
-
-// // schema design
-// const productSchema = mongoose.Schema(
-//   {
-//     name: {
-//       type: String,
-//       required: [true, "please provide a name for this product"],
-//       trim: true,
-//       unique: [true, "name must be unique"],
-//       minLength: [3, "name must be at least 3 characters"],
-//       maxLength: [100, "name is too large"],
-//     },
-//     description: {
-//       type: String,
-//       required: true,
-//     },
-//     unit: {
-//       type: String,
-//       required: true,
-//       enum: {
-//         values: ["kg", "litre", "pcs", "bag"],
-//         message: "unit value must be {VALUE}",
-//       },
-//     },
-//     imageUrls: [
-//       {
-//         type: String,
-//         required: true,
-//         validate: {
-//           validator: (value) => {
-//             if (!Array.isArray(value)) {
-//               return false;
-//             }
-//             let isValid = true;
-//             value.forEach((url) => {
-//               if (!validator.isURL(url)) {
-//                 isValid = false;
-//               }
-//             });
-//             return isValid;
-//           },
-//           message: "Please provide valid image urls",
-//         },
-//       },
-//     ],
-//     category: {
-//       type: String,
-//       required: true,
-//     },
-//     brand: {
-//       name: {
-//         type: String,
-//         required: true,
-//       },
-//       id: {
-//         type: ObjectId,
-//         ref: "Brand",
-//         required: true,
-//       },
-//     },
-//   },
-//   {
-//     timestamps: true,
-//   }
-// );
-
-// // mongoose middleware for saving data: pre/ post
-// productSchema.pre("save", function (next) {
-//   console.log("Before saving data");
-//   if (this.quantity == 0) {
-//     this.status = "out-of-stock";
-//   }
-//   next();
-// });
-
-// //SCHEMA > MODEL > QUERY
-// const Product = mongoose.model("Product", productSchema);
-
-// module.exports = Product;
