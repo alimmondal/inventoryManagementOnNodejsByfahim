@@ -72,10 +72,10 @@ exports.updateBrand = async (req, res, next) => {
 
     // console.log(result);
 
-    if (!result.modifiedCount) {
+    if (!result.nModified) {
       return res.status(400).json({
         status: "Fail",
-        error: "Couldn't update the brand with id",
+        error: "Couldn't updated the brand with id",
       });
     }
 

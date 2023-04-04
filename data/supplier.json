@@ -4,7 +4,7 @@
     "email": "meba.pran@test.com",
     "brand": {
       "name": "Rupchanda",
-      "id": "633eb987781220e4d2abd91e"
+      "id": "642565b7a617e944f4f9e94f"
     },
     "contactNumber": ["0111111111", "0222222222"],
     "emergencyContactNumber": "011111111111",
@@ -21,7 +21,7 @@
     "email": "italimbd@gail.com",
     "brand": {
       "name": "ACI",
-      "id": "633eb987781220e4d2abd91c"
+      "id": "642565b7a617e944f4f9e94d"
     },
     "contactNumber": ["0111111111", "0222222222"],
     "emergencyContactNumber": "011111111111",
@@ -38,7 +38,7 @@
     "email": "ialim.dev@gmail.com",
     "brand": {
       "name": "Fresh",
-      "id": "633eb987781220e4d2abd91d"
+      "id": "642565b7a617e944f4f9e94e"
     },
     "contactNumber": ["0111111111", "0222222222"],
     "emergencyContactNumber": "011111111111",
