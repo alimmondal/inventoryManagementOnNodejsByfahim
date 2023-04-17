@@ -3,11 +3,11 @@ var nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 
 const CLIENT_ID =
-  "885936785776-c2rtvo58lh4nccrun296i5pgfi1v4d50.apps.googleusercontent.com";
-const CLIENT_SECRET = "hw_667AvnmHppv1xixGYJh00";
+  "109367044159-q1d62v7nqrq8qukulctkfm4m8n0kh3mq.apps.googleusercontent.com";
+const CLIENT_SECRET = "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";
 const REDIRECT_URI = "https://developers.google.com/oauthplayground";
 const REFRESH_TOKEN =
-  "1//04KN6b_pseGhkCgYIARAAGAQSNwF-L9IrDTkTdMYCIB8qn36-_t6bAN1O6sdw7meaVypeNVuZT9XmO9u1uHXDUt09bMCL3C6eKko";
+  "1//04JdhhV9iVpXfCgYIARAAGAQSNwF-L9Irt58f-i9tGoCeNgEkBh6QfcriA1lLCR9YlR6tSPw8q8bYWb8auSijwPCKiq8FA79qok8";
 const SENDER_MAIL = "italimbd@gmail.com";
 
 const oAuth2Client = new google.auth.OAuth2(

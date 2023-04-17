@@ -14,15 +14,15 @@
     "categories": "rice",
     "brand": {
       "name": "ACI",
-      "id": "633eb987781220e4d2abd91c"
+      "id": "642565b7a617e944f4f9e94d"
     },
     "store": {
-      "name": "chottogram",
-      "id": "633fc991d892d6a0a332dc58"
+      "name": "dhaka",
+      "id": "642c3743e02038d2f3c05b33"
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "633ecd6b62dce907af306676"
+      "id": "642af47d740cf18c1c755520"
     }
   },
   {
@@ -43,11 +43,11 @@
     },
     "store": {
       "name": "dhaka",
-      "id": "633fc8bad892d6a0a332dc55"
+      "id": "642c3743e02038d2f3c05b33"
     },
     "suppliedBy": {
       "name": "Alim",
-      "id": "633ecfff46075d87c4270ff8"
+      "id": "642af583740cf18c1c755523"
     }
   },
   {
@@ -64,7 +64,7 @@
     "categories": "rice",
     "brand": {
       "name": "Fresh",
-      "id": "633eb987781220e4d2abd91d"
+      "id": "642565b7a617e944f4f9e94e"
     },
     "store": {
       "name": "barishal",
@@ -72,7 +72,7 @@
     },
     "suppliedBy": {
       "name": "fahim",
-      "id": "633ed03d46075d87c4270ffa"
+      "id": "642af5db740cf18c1c755525"
     }
   },
   {
@@ -93,11 +93,11 @@
     },
     "store": {
       "name": "dhaka",
-      "id": "633fc8bad892d6a0a332dc55"
+      "id": "642c3743e02038d2f3c05b33"
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "633ecd6b62dce907af306676"
+      "id": "642af47d740cf18c1c755520"
     }
   },
   {
@@ -114,15 +114,15 @@
     "categories": "Oil",
     "brand": {
       "name": "Rupchanda",
-      "id": "633eb987781220e4d2abd91e"
+      "id": "642565b7a617e944f4f9e94f"
     },
     "store": {
       "name": "chottogram",
-      "id": "633fc991d892d6a0a332dc58"
+      "id": "642c37ffe02038d2f3c05b35"
     },
     "suppliedBy": {
       "name": "Alim",
-      "id": "633ecfff46075d87c4270ff8"
+      "id": "642af583740cf18c1c755523"
     }
   },
   {
@@ -142,12 +142,12 @@
       "id": "633eb987781220e4d2abd91d"
     },
     "store": {
-      "name": "barishal",
-      "id": "633fcda0d892d6a0a332dc5a"
+      "name": "chottogram",
+      "id": "642c37ffe02038d2f3c05b35"
     },
     "suppliedBy": {
       "name": "fahim",
-      "id": "633ed03d46075d87c4270ffa"
+      "id": "642af5db740cf18c1c755525"
     }
   },
   {
@@ -163,8 +163,8 @@
     "status": "in-stock",
     "categories": "rice",
     "brand": {
-      "name": "ACI",
-      "id": "633eb987781220e4d2abd91c"
+      "name": "Rupchanda",
+      "id": "642565b7a617e944f4f9e94f"
     },
     "store": {
       "name": "dhaka",
@@ -172,7 +172,7 @@
     },
     "suppliedBy": {
       "name": "mezbaul abedin persian",
-      "id": "633ecd6b62dce907af306676"
+      "id": "642af47d740cf18c1c755520"
     }
   }
 ]
